@@ -1,4 +1,4 @@
-package BFS;
+package Graphs;
 import java.util.*;
 /**
  * @Author Manujitha Perera

@@ -1,4 +1,4 @@
-package BFS;
+package Graphs;
 
 /**
  * @Author Manujitha Perera
