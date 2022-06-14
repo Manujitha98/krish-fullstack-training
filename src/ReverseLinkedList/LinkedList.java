@@ -1,4 +1,4 @@
-package LinkedListAssignment;
+package ReverseLinkedList;
 
 public class LinkedList {
 
@@ -70,23 +70,14 @@ public class LinkedList {
     }
 
     public void reverseList() {
-        // Find number of elements in the LinkedList
-        int count = 1;
-        Link current = head;
-        while (current.next != null) {
-            current = current.next;
-            count++;
-        }
-        // utility function to reverse List recursively
-        reverseUtil(count);
-
+        reverseUtil(head);
     }
 
-    private void reverseUtil(int step) {
-        if (step < 1)
+    private void reverseUtil(Link step) {
+        if (step.next == null)
             return;
         String temp = removeFront();
-        reverseUtil(step - 1);
+        reverseUtil(step.next);
         addLast(temp);
 
     }

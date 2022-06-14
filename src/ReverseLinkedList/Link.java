@@ -1,4 +1,4 @@
-package LinkedListAssignment;
+package ReverseLinkedList;
 
 public class Link {
 

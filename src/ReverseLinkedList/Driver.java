@@ -11,17 +11,10 @@ public class Driver {
 
         myList.reverseList();
 
-        System.out.println(myList.removeLast());
-        System.out.println(myList.removeLast());
-        System.out.println(myList.removeLast());
-        System.out.println(myList.removeLast());
-
-        // System.out.println(myList.removeFront());
-        // System.out.println(myList.removeFront());
-        // System.out.println(myList.removeLast());
-        // System.out.println(myList.removeLast());
-        // System.out.println(myList.removeLast());
-        // System.out.println(myList.removeLast());
+        System.out.println(myList.removeFront());
+        System.out.println(myList.removeFront());
+        System.out.println(myList.removeFront());
+        System.out.println(myList.removeFront());
 
     }
 
