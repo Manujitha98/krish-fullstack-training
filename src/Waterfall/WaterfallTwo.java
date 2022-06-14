@@ -12,8 +12,6 @@ public class WaterfallTwo {
                 { 0, 0, 0, 0, 0, 0, 0 },
         };
 
-        System.out.println(input.length);
-
         pourWater(input, 2);
 
     }
@@ -35,14 +33,29 @@ public class WaterfallTwo {
             return;
         }
 
-        if (array[x][y] == 0) {
+        if (array[x + 1][y] == 0) {
             util(array, x + 1, y, percentage, result);
         }
-        if (array[x][y] == 1) {
-            if (y + 1 < array[x].length)
-                util(array, x + 1, y + 1, percentage / 2, result);
-            if (y - 1 > -1)
-                util(array, x + 1, y - 1, percentage / 2, result);
+        if (array[x + 1][y] == 1) {
+            int temp;
+            if (y + 1 < array[x].length) {
+                temp = y;
+                while (temp < array[x].length && array[x + 1][temp] == 1) {
+                    temp++;
+                    if (temp > array[x].length)
+                        return;
+                }
+                util(array, x + 1, temp, percentage / 2, result);
+            }
+            if (y - 1 > -1) {
+                temp = y;
+                while (temp > -1 && array[x + 1][temp] == 1) {
+                    temp--;
+                    if (temp < 0)
+                        return;
+                }
+                util(array, x + 1, temp, percentage / 2, result);
+            }
         }
 
     }
