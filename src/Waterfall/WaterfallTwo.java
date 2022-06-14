@@ -1,6 +1,6 @@
 package Waterfall;
 
-public class Waterfall {
+public class WaterfallTwo {
     public static void main(String[] args) {
         int[][] input = new int[][] {
                 { 0, 0, 0, 0, 0, 0, 0 },
@@ -11,6 +11,8 @@ public class Waterfall {
                 { 0, 0, 0, 0, 0, 0, 1 },
                 { 0, 0, 0, 0, 0, 0, 0 },
         };
+
+        System.out.println(input.length);
 
         pourWater(input, 2);
 
