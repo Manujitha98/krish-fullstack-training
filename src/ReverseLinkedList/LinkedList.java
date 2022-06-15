@@ -4,6 +4,14 @@ public class LinkedList {
 
     Link head;
 
+    public void printLinkedList() {
+        Link current = head;
+        while (current != null) {
+            System.out.println(current.value);
+            current = current.next;
+        }
+    }
+
     public void addFront(String value) {
 
         Link item = new Link(value);
@@ -81,4 +89,31 @@ public class LinkedList {
         addLast(temp);
 
     }
+
+    public void checkPalindrome() {
+        palindromeUtil(head);
+
+    }
+
+    private Link palindromeUtil(Link step) {
+
+        if (step.value.equals(step.next.value)) {
+
+            return step.next.next;
+        }
+
+        if (!step.value.equals(step.next.value)) {
+            Link secondHead = palindromeUtil(step.next);
+            if (secondHead.value.equals(step.value)) {
+                if (secondHead.value.equals(head.value)) {
+                    System.out.println("The Linked List is a Palindrome!");
+                }
+                return secondHead.next;
+            }
+        }
+
+        return step.next;
+
+    }
+
 }

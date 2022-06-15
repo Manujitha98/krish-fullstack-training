@@ -4,17 +4,17 @@ public class Driver {
     public static void main(String[] args) {
         LinkedList myList = new LinkedList();
 
-        myList.addLast("Manujitha");
-        myList.addLast("Banula");
-        myList.addLast("Janith");
-        myList.addLast("Sam");
+        myList.addLast("A");
+        myList.addLast("B");
+        myList.addLast("C");
+        myList.addLast("D");
+        myList.addLast("D");
+        myList.addLast("C");
+        myList.addLast("B");
+        myList.addLast("A");
 
-        myList.reverseList();
-
-        System.out.println(myList.removeFront());
-        System.out.println(myList.removeFront());
-        System.out.println(myList.removeFront());
-        System.out.println(myList.removeFront());
+        myList.printLinkedList();
+        myList.checkPalindrome();
 
     }
 
