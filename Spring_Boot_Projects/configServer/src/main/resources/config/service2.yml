@@ -1,0 +1,2 @@
+service:
+  greeing: "Hello From Service2!"
