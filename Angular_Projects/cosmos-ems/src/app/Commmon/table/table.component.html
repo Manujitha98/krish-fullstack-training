@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <!--bootstrap table-->
+
+  <div class="row">
+    <div class="col-sm-6 pt-lg-5">
+      <div class="flex-container">
+        <button class="btn-primary" (click)="toggleIndexFunction()">
+          {{ toggleIndex ? "Hide" : "Show" }} Index
+        </button>
+        <input
+          class="input-group-text"
+          type="text"
+          placeholder="Recipient's username"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+          placeholder="Search For Movies Here"
+          [(ngModel)]="tableFilter"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-hover" *ngIf="tableData.length > 0">
+      <thead>
+        <tr>
+          <th scope="col" *ngIf="toggleIndex">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Year</th>
+          <th scope="col">Rating</th>
+          <th scope="col">Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of filteredData; let i = index">
+          <td scope="row" *ngIf="toggleIndex">{{ i + 1 }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.year }}</td>
+          <td>{{ data.rating }}</td>
+          <td>{{ data.votes }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
